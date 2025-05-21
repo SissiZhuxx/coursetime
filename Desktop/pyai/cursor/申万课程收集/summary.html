@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汇总结果 - 申万课程征集</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 返回首页按钮 -->
+    <nav style="margin: 16px 0 0 16px;">
+        <a href="index.html" style="color:#2d6cdf;text-decoration:underline;font-size:1em;">← 返回首页</a>
+    </nav>
+    <!-- 汇总热力图区域 -->
+    <section class="info-section">
+        <h2 style="margin-top:0;">所有同学可用时间汇总热力图</h2>
+        <div id="summary-calendar-head" class="calendar-head"></div>
+        <div id="summary-calendar-body" class="calendar-body"></div>
+    </section>
+    <!-- 推荐课程时间文字区 -->
+    <section class="info-section" id="recommend-section">
+        <h3>推荐课程时间</h3>
+        <div id="recommend-text"></div>
+    </section>
+    <!-- 选择同学筛选区 -->
+    <section class="input-section">
+        <label>选择同学（点击高亮多选）：</label>
+        <div id="user-filter-zone" style="width:98%;min-height:40px;"></div>
+    </section>
+    <!-- 导出与管理员功能区 -->
+    <section class="input-section">
+        <button id="export-word">导出当前结果为Word</button>
+        <button id="admin-btn">管理员入口</button>
+    </section>
+    <footer>
+        <p>申万宏源投教基地 · 课程时间征集互动网页</p>
+    </footer>
+    <script src="summary.js"></script>
+    <!-- 更稳定的html-docx.js CDN -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/html-docx-js/0.4.1/html-docx.min.js"></script>
+</body>
+</html> 

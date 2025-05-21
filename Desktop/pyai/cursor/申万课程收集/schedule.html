@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择可上课时间 - 申万课程征集</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 返回首页按钮 -->
+    <nav style="margin: 16px 0 0 16px;">
+        <a href="index.html" style="color:#2d6cdf;text-decoration:underline;font-size:1em;">← 返回首页</a>
+    </nav>
+    <!-- 用户姓名显示 -->
+    <section class="info-section" id="user-info">
+        <span id="user-name"></span>，请选择您在下列时间段内可以到场的时间：
+    </section>
+    <!-- 日程表区域 -->
+    <section class="schedule-section">
+        <!-- 日历表头，动态生成 -->
+        <div id="calendar-head" class="calendar-head"></div>
+        <!-- 日程表主体，后续JS生成 -->
+        <div id="calendar-body" class="calendar-body"></div>
+    </section>
+    <!-- 操作按钮区 -->
+    <section class="input-section" style="margin-top:32px;">
+        <button id="submit-schedule">提交我的可用时间</button>
+        <button id="reset-schedule">重置选择</button>
+        <button id="delete-schedule">删除我的记录</button>
+    </section>
+    <footer>
+        <p>申万宏源投教基地 · 课程时间征集互动网页</p>
+    </footer>
+    <script src="schedule.js"></script>
+</body>
+</html> 

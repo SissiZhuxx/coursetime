@@ -1,0 +1,181 @@
+/* 页面整体样式，设置背景色和字体 */
+body {
+    font-family: 'Microsoft YaHei', Arial, sans-serif; /* 设置中文和英文字体 */
+    background: #f7f9fb; /* 浅灰色背景 */
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+/* 头部样式 */
+header {
+    background: #2d6cdf; /* 蓝色背景 */
+    color: #fff;
+    padding: 24px 0 12px 0;
+    text-align: center;
+}
+
+/* 信息区样式 */
+.info-section {
+    background: #fff;
+    margin: 24px auto 0 auto;
+    max-width: 480px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 20px 24px;
+    font-size: 1.1em;
+}
+
+/* 输入区样式 */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 32px auto 0 auto;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 24px 24px 32px 24px;
+}
+.input-section label {
+    font-size: 1em;
+    margin-bottom: 8px;
+}
+.input-section input[type="text"] {
+    width: 80%;
+    padding: 8px 12px;
+    font-size: 1em;
+    border: 1px solid #bfc8d8;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    outline: none;
+    transition: border 0.2s;
+}
+.input-section input[type="text"]:focus {
+    border: 1.5px solid #2d6cdf;
+}
+.input-section button {
+    width: 80%;
+    padding: 10px 0;
+    margin: 6px 0;
+    font-size: 1.05em;
+    background: #2d6cdf;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.input-section button:hover {
+    background: #1a4fa0;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    color: #888;
+    font-size: 0.95em;
+    margin: 40px 0 12px 0;
+}
+
+/* 响应式设计：移动端适配 */
+@media (max-width: 600px) {
+    .info-section, .input-section {
+        max-width: 98vw;
+        padding: 12px 4vw;
+    }
+    header {
+        font-size: 1em;
+        padding: 16px 0 8px 0;
+    }
+}
+
+/* 日程表头部样式 */
+.calendar-head {
+    display: flex; /* 使用Flex布局横向排列 */
+    justify-content: center;
+    align-items: center;
+    margin: 24px auto 0 auto;
+    max-width: 900px;
+    min-width: 320px;
+}
+.calendar-col-head {
+    flex: 1 1 0;
+    text-align: center;
+    font-weight: bold;
+    background: #eaf1fb;
+    color: #2d6cdf;
+    border: 1px solid #d0d8e8;
+    padding: 10px 0;
+    font-size: 1em;
+    min-width: 70px;
+    border-radius: 6px 6px 0 0;
+    margin-right: 2px;
+}
+.calendar-col-head:last-child {
+    margin-right: 0;
+}
+
+/* 日程表主体样式（预留，后续完善） */
+.calendar-body {
+    display: flex;
+    min-height: 120px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid #d0d8e8;
+    border-top: none;
+    overflow-x: auto;
+}
+
+/* 日程表单元格样式（后续完善） */
+.calendar-cell {
+    flex: 1 1 0;
+    min-width: 70px;
+    height: 40px;
+    border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background: #f7f9fb;
+    transition: background 0.2s;
+}
+.calendar-cell.selected {
+    background: #2d6cdf;
+    color: #fff;
+}
+.calendar-cell:last-child {
+    border-right: none;
+}
+
+/* 日程表时段行首样式 */
+.calendar-body > div > div:first-child {
+    min-width: 80px;
+    max-width: 90px;
+    text-align: right;
+    color: #2d6cdf;
+    font-weight: bold;
+    background: #f0f6ff;
+    border-right: 1px solid #d0d8e8;
+    border-bottom: 1px solid #eaeaea;
+    line-height: 40px;
+    padding-right: 8px;
+    font-size: 1em;
+    border-radius: 0 0 0 0;
+}
+
+@media (max-width: 900px) {
+    .calendar-head, .calendar-body {
+        max-width: 98vw;
+        min-width: 320px;
+    }
+    .calendar-col-head, .calendar-cell {
+        min-width: 48px;
+        font-size: 0.95em;
+        padding: 6px 0;
+    }
+} 
